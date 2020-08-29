@@ -10,7 +10,8 @@
   "scripts": {
     "watch": "lerna run watch --parallel --stream",
     "compile": "lerna run compile --parallel --stream",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:browser": "jest --config jest.config.js --coverage",
+    "test:server": "jest --config jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -29,10 +30,13 @@
   "homepage": "https://github.com/lbwa/monorepo-ts-boilerplate#readme",
   "dependencies": {},
   "devDependencies": {
+    "@types/jest": "^26.0.10",
     "husky": "^4.2.5",
+    "jest": "^26.4.2",
     "lerna": "^3.22.1",
     "lint-staged": "^10.2.13",
-    "prettier": "^2.1.1"
+    "prettier": "^2.1.1",
+    "ts-jest": "^26.3.0"
   },
   "prettier": {
     "printWidth": 80,
@@ -48,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "packages/**/*.{js,jsx,ts,tsx,json,css,scss,sass,md}": [
       "prettier --write"
     ]
   }

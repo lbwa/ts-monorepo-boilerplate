@@ -21,6 +21,7 @@ module.exports = {
   extends: [
     // https://eslint.org/docs/user-guide/configuring#using-eslintrecommended
     'eslint:recommended',
+    // solve prettier and eslint formatting conflicts
     'plugin:prettier/recommended'
   ],
   // A glob specific configuration works almost the same as any other ESLint config.

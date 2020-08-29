@@ -6,7 +6,7 @@
     "browser-side-only"
   ],
   "author": "Bowen Liu <asyncmode@outlook.com>",
-  "homepage": "https://github.com/lbwa/monorepo-ts-boilerplate/tree/master/packages/client#readme",
+  "homepage": "https://github.com/lbwa/ts-monorepo-boilerplate/tree/master/packages/client#readme",
   "license": "MIT",
   "main": "dist/client.js",
   "module": "dist/client.module.js",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lbwa/monorepo-ts-boilerplate.git"
+    "url": "git+ssh://git@github.com/lbwa/ts-monorepo-boilerplate.git"
   },
   "scripts": {
     "watch": "tsc -w -p tsconfig.json",
@@ -30,7 +30,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
-    "url": "https://github.com/lbwa/monorepo-ts-boilerplate/issues"
+    "url": "https://github.com/lbwa/ts-monorepo-boilerplate/issues"
   },
   "devDependencies": {
     "typescript": "^4.0.2"

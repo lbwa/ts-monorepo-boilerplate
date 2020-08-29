@@ -1,12 +1,14 @@
 <h1 align="center">TS Monorepo Boilerplate</h1>
 
-Build a monorepo project based on `TypeScript` as soon as possible.
+[wiki-monorepo]: https://en.wikipedia.org/wiki/Monorepo
+
+Build a [monorepo][wiki-monorepo] project based on `TypeScript` as soon as possible.
 
 ## Features
 
-- Unit test integration
-
 - Multiple JS environments support (`browser`, `nodejs`)
+
+- Unit test integration
 
 - Basic project management (eg, code formatter, git hooks, etc.)
 

@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git@github.com/lbwa/monorepo-ts-boilerplate.git"
+    "url": "git+https://git@github.com/lbwa/ts-monorepo-boilerplate.git"
   },
   "keywords": [
     "monorepo",
@@ -25,9 +25,9 @@
   "author": "Bowen Liu <asyncmode@outlook.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lbwa/monorepo-ts-boilerplate/issues"
+    "url": "https://github.com/lbwa/ts-monorepo-boilerplate/issues"
   },
-  "homepage": "https://github.com/lbwa/monorepo-ts-boilerplate#readme",
+  "homepage": "https://github.com/lbwa/ts-monorepo-boilerplate#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.10",

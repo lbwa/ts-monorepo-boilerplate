@@ -6,11 +6,21 @@ Build a [monorepo][wiki-monorepo] project based on `TypeScript` as soon as possi
 
 ## Features
 
+- 100% TypeScript support
+
+  Every package has own `tsconfig.json` for better compatibility
+
 - Multiple JS environments (`browser`, `nodejs`) in the same monorepo
 
-- Unit test integration
+- Unit test integration based on `jest`
 
-- Basic project management (eg, code formatter, git hooks, etc.)
+- Best practices for project management
+
+  - Code formatter based on `prettier`, `lint-staged`
+
+  - Code linter based on `eslint` (for `*.js`) and `typescript-eslint` (for `*.ts`)
+
+  - Git hooks based on `husky`
 
 ## Unit tests
 

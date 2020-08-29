@@ -119,7 +119,7 @@ const basicConfig = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['./scripts/setup-jest-env.ts'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -141,11 +141,7 @@ const basicConfig = {
   testMatch: ['<rootDir>/packages/**/__tests__/**/*spec.[jt]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    '\\\\node_modules\\\\',
-    '\\\\dist\\\\',
-    '\\\\server\\\\'
-  ],
+  testPathIgnorePatterns: ['\\\\node_modules\\\\', '\\\\dist\\\\'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -181,4 +177,17 @@ const basicConfig = {
   // watchman: true,
 }
 
-module.exports = basicConfig
+const negativeDirs =
+  process.env.TEST_ENV === 'browser' ? '\\\\server\\\\' : '\\\\client\\\\'
+
+module.exports = Object.assign(basicConfig, {
+  coveragePathIgnorePatterns: basicConfig.coveragePathIgnorePatterns.concat(
+    negativeDirs
+  ),
+  testPathIgnorePatterns: basicConfig.testPathIgnorePatterns.concat(
+    negativeDirs
+  ),
+  transformIgnorePatterns: basicConfig.transformIgnorePatterns.concat(
+    negativeDirs
+  )
+})

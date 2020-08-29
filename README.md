@@ -4,6 +4,16 @@
 
 Build a [monorepo][wiki-monorepo] project based on [TypeScript](https://github.com/microsoft/TypeScript/#readme) as soon as possible.
 
+<!-- TOC -->
+
+- [Features](#features)
+- [Development](#development)
+- [Production](#production)
+- [Unit tests](#unit-tests)
+- [License](#license)
+
+<!-- /TOC -->
+
 ## Features
 
 - 100% `TypeScript` support
@@ -21,6 +31,22 @@ Build a [monorepo][wiki-monorepo] project based on [TypeScript](https://github.c
   - Code linter based on [eslint](https://github.com/eslint/eslint) (for `JavaScript` files) and [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) (for `TypeScript` files)
 
   - Git hooks based on [husky](https://github.com/typicode/husky)
+
+## Development
+
+- run with [TS compiler watch mode](https://www.typescriptlang.org/docs/handbook/configuring-watch.html).
+
+  ```bash
+  $ yarn run watch
+  ```
+
+## Production
+
+- All output files will place in `packages/*/dist` folder.
+
+  ```bash
+  $ yarn run compile
+  ```
 
 ## Unit tests
 

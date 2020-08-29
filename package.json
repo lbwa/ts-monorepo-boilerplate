@@ -3,8 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "description": "Monorepo boilerplate based on TypeScript",
+  "workspaces": [
+    "packages/*"
+  ],
   "main": "index.js",
   "scripts": {
+    "watch": "lerna run watch --parallel --stream",
+    "compile": "lerna run compile --parallel --stream",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

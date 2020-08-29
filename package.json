@@ -1,0 +1,50 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo boilerplate based on TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com/lbwa/monorepo-ts-boilerplate.git"
+  },
+  "keywords": [
+    "monorepo",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": "Bowen Liu <asyncmode@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lbwa/monorepo-ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/lbwa/monorepo-ts-boilerplate#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.2.13",
+    "prettier": "^2.1.1"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}

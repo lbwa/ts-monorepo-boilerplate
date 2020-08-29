@@ -1,0 +1,34 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# production
+dist
+lib
+
+# logs
+*.log
+
+# dot env files
+.env
+.env.development
+.env.production
+.env.test
+.env.local
+.env.*.local
+
+# editor configurations
+.vscode
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.tsbuildinfo
+draft
+draft.*
+.todo

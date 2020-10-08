@@ -8,8 +8,9 @@
   "author": "Bowen Liu <asyncmode@outlook.com>",
   "homepage": "https://github.com/lbwa/ts-monorepo-boilerplate/tree/master/packages/server#readme",
   "license": "MIT",
-  "main": "dist/server.js",
-  "module": "dist/server.module.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "types": "dist/types/index.d.ts",
   "directories": {
     "lib": "dist",
     "test": "__tests__"
@@ -18,16 +19,20 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lbwa/ts-monorepo-boilerplate.git"
   },
   "scripts": {
-    "watch": "tsc -w -p tsconfig.json",
-    "compile": "tsc -p tsconfig.json",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "declaration": "tsc -p tsconfig.build.json",
+    "prebuild": "rm -rf ./dist/*",
+    "build": "yarn build:types && yarn build:es && yarn build:cjs",
+    "build:es": "node ../../scripts/build es",
+    "build:cjs": "node ../../scripts/build cjs",
+    "build:types": "yarn declaration"
   },
   "bugs": {
     "url": "https://github.com/lbwa/ts-monorepo-boilerplate/issues"

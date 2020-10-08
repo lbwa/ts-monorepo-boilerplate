@@ -20,6 +20,8 @@ Build a [monorepo][wiki-monorepo] project based on [TypeScript](https://github.c
 
   Every package has own [tsconfig.json](https://www.typescriptlang.org/tsconfig) for better compatibility
 
+- Integrate with [babeljs](https://babel.dev)
+
 - Multiple JS environments (`browser`, `nodejs`) in the same monorepo
 
 - Unit test integration based on [jest](https://github.com/facebook/jest)
@@ -42,29 +44,34 @@ Build a [monorepo][wiki-monorepo] project based on [TypeScript](https://github.c
 
 ## Production
 
+> The entire production build is based on [babeljs](https://babel.dev), you can modify [babel options](https://babel.dev/docs/en/options) in the [configs/babel.config.js](./configs/babel.config.js) if necessary.
+
 - All output files will place in `packages/*/dist` folder.
 
   ```bash
-  $ yarn run compile
+  $ yarn run build
   ```
 
 ## Unit tests
 
 Support all [jest cli options](https://jestjs.io/docs/en/cli).
 
-- run all `browser side only` unit tests
+- run all unit tests
 
   ```bash
-  $ yarn run test:browser
-  # or yarn run test
-  # or npm t
+  $ yarn run test
   ```
 
-- run all `server side only` unit tests
+- run all unit tests with watch mode
 
   ```bash
-  $ yarn run test:server
-  # or npm run test:server
+  $ yarn run test:watch
+  ```
+
+- run all unit tests with coverage
+
+  ```bash
+  $ yarn run test:ci
   ```
 
 ## License

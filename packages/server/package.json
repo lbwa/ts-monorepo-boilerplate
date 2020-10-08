@@ -26,6 +26,7 @@
     "url": "git+ssh://git@github.com/lbwa/ts-monorepo-boilerplate.git"
   },
   "scripts": {
+    "watch": "tsc -p tsconfig.json -w",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "declaration": "tsc -p tsconfig.build.json",
     "prebuild": "rm -rf ./dist/*",

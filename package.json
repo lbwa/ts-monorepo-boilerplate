@@ -8,6 +8,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "watch": "lerna run watch --parallel --stream",
     "build": "lerna run build --parallel --stream",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
